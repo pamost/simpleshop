@@ -1,2 +1,2 @@
 # simpleshop
-#### Blog
+#### Project Simple Shop e-commerce
