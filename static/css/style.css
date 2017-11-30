@@ -3,19 +3,32 @@ html, body {
     width: 100%;
     position: absolute;
     max-height: 100%;
-    background-color: azure;
-    background: url(../img/bg.jpg) center;
+    background: url('../img/bg.jpg') center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .general-container{
+    background: rgba(16, 56, 117, 0.66);
+    height: 100%;
+}
+
+.general-container form{
+    padding-top: 30px;
+}
+
+.general-container form label{
+    font-weight: 100;
+    color: snow;
+    line-height: 28px;
 }
 
 .top-container{
-    margin-top: 10%;
+    padding-top: 10%;
 }
 
 
 .title {
-    color: #2e6da4;
+    color: snow;
     text-align: center;
+    font-weight: 100;
 }
