@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'landing',
+    'products',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -118,5 +120,8 @@ DATE_FORMAT = 'd E Y'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(SITE_ROOT, 'static')]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(SITE_ROOT, 'media')
 
 ADMIN_SITE_HEADER = "Simple Shop"
