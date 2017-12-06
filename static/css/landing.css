@@ -1,0 +1,34 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    max-height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.general-container{
+    /*background: rgba(16, 56, 117, 0.66);*/
+    background: url('../img/bg.jpg') center;
+    height: 100%;
+}
+
+.general-container form{
+    padding-top: 30px;
+}
+
+.general-container form label{
+    font-weight: 100;
+    color: snow;
+    line-height: 28px;
+}
+
+.top-container{
+    padding-top: 10%;
+}
+
+
+.title {
+    color: snow;
+    text-align: center;
+    font-weight: 100;
+}

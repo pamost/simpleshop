@@ -2,6 +2,10 @@ from django.shortcuts import render
 from .forms import *
 
 
+def home(request):
+    return render(request, 'landing/home.html', locals())
+
+
 def landing(request):
     form = SubscriberForm(request.POST or None)
 
@@ -13,6 +17,5 @@ def landing(request):
         print(data['name'])
 
         form.save()
-
 
     return render(request, 'landing/landing.html', locals())
