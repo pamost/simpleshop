@@ -16,106 +16,36 @@
     <div class="container main-container">
         <div class="morePost row featuredPostContainer style2 globalPaddingTop ">
             <div class="col-lg-12">
-                <h3 class="boxes-title-1"><span>CATALOG PRODUCTS</span></h3>
+                <h3 class="boxes-title-1"><span>КАТАЛОГ КНИГ</span></h3>
             </div>
             <div class="container">
                 <div class="row xsResponse">
+                    {% for product_image in products_images %}
 
-                    <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="product">
-                            <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist" data-placement="left">
-                                <i class="glyphicon glyphicon-heart"></i>
-                            </a>
+                        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="product">
+                                <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist" data-placement="left">
+                                    <i class="glyphicon glyphicon-heart"></i>
+                                </a>
 
-                            <div class="image">
-                                <div class="quickview">
-                                    <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax\product.html" data-target="#productSetailsModalAjax">Quick View </a>
+                                <div class="image">
+                                    <div class="quickview">
+                                        <a data-toggle="modal" class="btn btn-xs btn-quickview" href="#">Подробнее</a>
+                                    </div>
+                                    <a href="#"><img src="{{ product_image.image.url }}" alt="img" class="img-responsive"></a>
+                                    <div class="promotion"><span class="new-product"> НОВИНКА</span> <span class="discount">15% СКИДКА</span></div>
                                 </div>
-                                <a href="#"><img src="img/30.jpeg" alt="img" class="img-responsive"></a>
-                                <div class="promotion"><span class="new-product"> NEW</span> <span class="discount">15% OFF</span></div>
-                            </div>
 
-                            <div class="description">
-                                <h4><a href="#">aliquam erat volutpat</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                <span class="size">XL / XXL / S </span>
-                            </div>
-                            <div class="price"><span>$25</span> <span class="old-price">$75</span></div>
-                            <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
-                        </div>
-                    </div>
-
-                    <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="product">
-                            <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist" data-placement="left">
-                                <i class="glyphicon glyphicon-heart"></i>
-                            </a>
-
-                            <div class="image">
-                                <div class="quickview">
-                                    <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax\product.html" data-target="#productSetailsModalAjax">Quick View </a>
+                                <div class="description">
+                                    <h4><a href="#">{{ product_image.product.name }}</a></h4>
+                                    <p>{{ product_image.product.longtitle }}</p>
                                 </div>
-                                <a href="#"><img src="img/30.jpeg" alt="img" class="img-responsive"></a>
-                                <div class="promotion"><span class="new-product"> NEW</span> <span class="discount">15% OFF</span></div>
+                                <div class="price"><span>{{ product_image.product.price }}</span> <span class="old-price">{{ product_image.product.old_price }}</span> тенге</div>
+                                <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Добавить в корзину </span> </a></div>
                             </div>
-
-                            <div class="description">
-                                <h4><a href="#">aliquam erat volutpat</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                <span class="size">XL / XXL / S </span>
-                            </div>
-                            <div class="price"><span>$25</span> <span class="old-price">$75</span></div>
-                            <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
                         </div>
-                    </div>
+                    {% endfor %}
 
-                    <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="product">
-                            <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist" data-placement="left">
-                                <i class="glyphicon glyphicon-heart"></i>
-                            </a>
-
-                            <div class="image">
-                                <div class="quickview">
-                                    <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax\product.html" data-target="#productSetailsModalAjax">Quick View </a>
-                                </div>
-                                <a href="#"><img src="img/30.jpeg" alt="img" class="img-responsive"></a>
-                                <div class="promotion"><span class="new-product"> NEW</span> <span class="discount">15% OFF</span></div>
-                            </div>
-
-                            <div class="description">
-                                <h4><a href="#">aliquam erat volutpat</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                <span class="size">XL / XXL / S </span>
-                            </div>
-                            <div class="price"><span>$25</span> <span class="old-price">$75</span></div>
-                            <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
-                        </div>
-                    </div>
-
-                    <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        <div class="product">
-                            <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist" data-placement="left">
-                                <i class="glyphicon glyphicon-heart"></i>
-                            </a>
-
-                            <div class="image">
-                                <div class="quickview">
-                                    <a data-toggle="modal" class="btn btn-xs btn-quickview" href="ajax\product.html" data-target="#productSetailsModalAjax">Quick View </a>
-                                </div>
-                                <a href="#"><img src="img/30.jpeg" alt="img" class="img-responsive"></a>
-                                <div class="promotion"><span class="new-product"> NEW</span> <span class="discount">15% OFF</span></div>
-                            </div>
-
-                            <div class="description">
-                                <h4><a href="#">aliquam erat volutpat</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                <span class="size">XL / XXL / S </span>
-                            </div>
-                            <div class="price"><span>$25</span> <span class="old-price">$75</span></div>
-                            <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
