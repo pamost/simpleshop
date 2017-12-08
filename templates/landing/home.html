@@ -16,36 +16,43 @@
     <div class="container main-container">
         <div class="morePost row featuredPostContainer style2 globalPaddingTop ">
             <div class="col-lg-12">
-                <h3 class="boxes-title-1"><span>КАТАЛОГ КНИГ</span></h3>
+                <h3 class="boxes-title-1"><span>КАТАЛОГ ВСЕХ КНИГ</span></h3>
             </div>
             <div class="container">
                 <div class="row xsResponse">
                     {% for product_image in products_images %}
-
-                        <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="product">
-                                <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist" data-placement="left">
-                                    <i class="glyphicon glyphicon-heart"></i>
-                                </a>
-
-                                <div class="image">
-                                    <div class="quickview">
-                                        <a data-toggle="modal" class="btn btn-xs btn-quickview" href="#">Подробнее</a>
-                                    </div>
-                                    <a href="#"><img src="{{ product_image.image.url }}" alt="img" class="img-responsive"></a>
-                                    <div class="promotion"><span class="new-product"> НОВИНКА</span> <span class="discount">15% СКИДКА</span></div>
-                                </div>
-
-                                <div class="description">
-                                    <h4><a href="#">{{ product_image.product.name }}</a></h4>
-                                    <p>{{ product_image.product.longtitle }}</p>
-                                </div>
-                                <div class="price"><span>{{ product_image.product.price }}</span> <span class="old-price">{{ product_image.product.old_price }}</span> тенге</div>
-                                <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Добавить в корзину </span> </a></div>
-                            </div>
-                        </div>
+                        {% include 'landing/poduct_item.html' %}
                     {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="container main-container">
+        <div class="morePost row featuredPostContainer style2 globalPaddingTop ">
+            <div class="col-lg-12">
+                <h3 class="boxes-title-1"><span>КАТАЛОГ КНИГ ПО ПРОГРАММИРОВАНИЮ</span></h3>
+            </div>
+            <div class="container">
+                <div class="row xsResponse">
+                    {% for product_image in products_images_programms %}
+                        {% include 'landing/poduct_item.html' %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-container">
+        <div class="morePost row featuredPostContainer style2 globalPaddingTop ">
+            <div class="col-lg-12">
+                <h3 class="boxes-title-1"><span>КАТАЛОГ ДЕТСКИХ КНИГ </span></h3>
+            </div>
+            <div class="container">
+                <div class="row xsResponse">
+                    {% for product_image in products_images_childs %}
+                        {% include 'landing/poduct_item.html' %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -57,8 +64,8 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="parallax-content clearfix">
-                            <h1 class="xlarge"> Trusted Seller 500+ </h1>
-                            <h5 class="parallaxSubtitle"> Lorem ipsum dolor sit amet consectetuer </h5>
+                            <h1 class="xlarge"> В нашем каталог магазина свыше 50000+  книг</h1>
+                            <h5 class="parallaxSubtitle"> Свыше 5000 + категорий  </h5>
                         </div>
                     </div>
                 </div>

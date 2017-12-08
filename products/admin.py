@@ -7,6 +7,16 @@ class ProductImageInLine(admin.TabularInline):
     extra = 0
 
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in Category._meta.fields]
+
+    class Meta:
+        model = Category
+
+
+admin.site.register(Category, CategoryAdmin)
+
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = [field.name for field in Product._meta.fields]
     inlines = [ProductImageInLine]

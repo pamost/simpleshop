@@ -1,0 +1,29 @@
+<div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
+    <div class="product">
+        <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist" data-placement="left">
+            <i class="glyphicon glyphicon-heart"></i>
+        </a>
+
+        <div class="image">
+            <div class="quickview">
+                <a data-toggle="modal" class="btn btn-xs btn-quickview" href="#">Подробнее</a>
+            </div>
+            <a href="#"><img src="{{ product_image.image.url }}" alt="img" class="img-responsive"></a>
+            <div class="promotion">
+                {%  if product_image.product.is_new %}
+                    <span class="new-product"> НОВИНКА </span>
+                {% endif %}
+                {%  if product_image.product.discount != 0 %}
+                    <span class="discount"> {{ product_image.product.discount }} % СКИДКА</span>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="description">
+            <h4><a href="#">{{ product_image.product.name }}</a></h4>
+            <p>{{ product_image.product.longtitle }}</p>
+        </div>
+        <div class="price"><span>{{ product_image.product.price }}</span> <span class="old-price">{{ product_image.product.old_price }}</span> тенге</div>
+        <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Добавить в корзину </span> </a></div>
+    </div>
+</div>
