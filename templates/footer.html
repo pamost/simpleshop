@@ -1,10 +1,11 @@
+{% load static %}
 <footer>
     <div class="footer">
         <div class="container">
             <div class="row">
 
                 <div class="col-lg-3  col-md-3 col-sm-4 col-xs-6">
-                    <h3> Support </h3>
+                    <h3> Поддержка </h3>
                     <ul>
                         <li class="supportLi">
                             <p> Lorem ipsum dolor sit amet, consectetur </p>
@@ -19,7 +20,7 @@
                 </div>
 
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> Shop </h3>
+                    <h3> Каталог </h3>
                     <ul>
                         <li><a href="#">Books</a></li>
                         <li><a href="#">Journals</a></li>
@@ -32,7 +33,7 @@
                 <div style="clear:both" class="hide visible-xs"></div>
 
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> Information </h3>
+                    <h3> Информация </h3>
                     <ul class="list-unstyled footer-nav">
                         <li><a href="#">Questions?</a></li>
                         <li><a href="#"> Order Status</a></li>
@@ -43,7 +44,7 @@
                 </div>
 
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> My Account </h3>
+                    <h3> Профиль </h3>
                     <ul>
                         <li><a href="#"> My Account </a></li>
                         <li><a href="#"> My Address </a></li>
@@ -56,12 +57,12 @@
                 <div style="clear:both" class="hide visible-xs"></div>
 
                 <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
-                    <h3> Stay in touch </h3>
+                    <h3> Оставайтесь на связи</h3>
                     <ul>
                         <li>
                             <div class="input-append newsLatterBox text-center">
                                 <input type="text" class="full text-center" placeholder="Email ">
-                                <button class="btn  bg-gray" type="button"> Subscribe <i class="fa fa-long-arrow-right"> </i></button>
+                                <button class="btn  bg-gray" type="button"> Подписаться <i class="fa fa-long-arrow-right"> </i></button>
                             </div>
                         </li>
                     </ul>
@@ -81,13 +82,15 @@
         <div class="container">
             <p class="pull-left"> &copy; SIMPLE SHOP 2017. All right reserved. </p>
             <div class="pull-right paymentMethodImg">
-                <img height="30" class="pull-right" src="img/master_card.png" alt="img">
-                <img height="30" class="pull-right" src="img/visa_card.png" alt="img">
-                <img height="30" class="pull-right" src="img/paypal.png" alt="img">
-                <img height="30" class="pull-right" src="img/american_express_card.png" alt="img">
-                <img height="30" class="pull-right" src="img/discover_network_card.png" alt="img">
-                <img height="30" class="pull-right" src="img/google_wallet.png" alt="img">
+                <img height="30" class="pull-right" src="{% static 'img/master_card.png' %}" alt="img">
+                <img height="30" class="pull-right" src="{% static 'img/visa_card.png' %}" alt="img">
+                <img height="30" class="pull-right" src="{% static 'img/paypal.png' %}" alt="img">
+                <img height="30" class="pull-right" src="{% static 'img/american_express_card.png' %}" alt="img">
+                <img height="30" class="pull-right" src="{% static 'img/discover_network_card.png' %}" alt="img">
+                <img height="30" class="pull-right" src="{% static 'img/google_wallet.png' %}" alt="img">
             </div>
         </div>
     </div>
 </footer>
+<script type="text/javascript" src="{% static 'js/jquery-1.10.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
