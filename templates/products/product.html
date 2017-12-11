@@ -37,60 +37,46 @@
 
             <div class="product-price"><span class="price-sales"> {{ product.price }}</span> <span class="price-standard">{{ product.old_price }}</span> тенге</div>
             <div class="details-description">
-                <p>{{ product.description }}</p>
-            </div>
-            <div class="color-details"><span class="selected-color"><strong>COLOR</strong></span>
-                <ul class="swatches Color">
-                    <li class="selected"><a style="background-color:#f1f40e"> </a></li>
-                    <li><a style="background-color:#adadad"> </a></li>
-                    <li><a style="background-color:#4EC67F"> </a></li>
-                </ul>
+                <p></p>
             </div>
 
-            <div class="productFilter productFilterLook2">
-                <div class="row">
-                    <div class="col-lg-6 col-sm-6 col-xs-6">
-                        <div class="filterBox">
-                            <select class="form-control">
-                                <option value="strawberries" selected="">Quantity
-                                <option value="mango">1
-                                <option value="bananas">2
-                                <option value="watermelon">3
-                                <option value="grapes">4
-                                <option value="oranges">5
-                                <option value="pineapple">6
-                                <option value="peaches">7
-                                <option value="cherries">8
-                            </select>
+            <form action="" id="form_buy_product">
+                <div class="productFilter productFilterLook2">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                            <div class="filterBox">
+                                <select class="form-control">
+                                    <option value="strawberries" selected="">Количество
+                                    <option value="mango">1
+                                    <option value="bananas">2
+                                    <option value="watermelon">3
+                                    <option value="grapes">4
+                                    <option value="oranges">5
+                                    <option value="pineapple">6
+                                    <option value="peaches">7
+                                    <option value="cherries">8
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-6 col-xs-6">
-                        <div class="filterBox">
-                            <select class="form-control">
-                                <option value="strawberries" selected="">Size
-                                <option value="mango">XL
-                                <option value="bananas">XXL
-                                <option value="watermelon">M
-                                <option value="apples">L
-                                <option value="apples">S
-                            </select>
+                        <div class="col-lg-6 col-sm-6 col-xs-6">
+
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="cart-actions">
-                <div class="addto row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <button onclick="" class="button btn-block btn-cart cart first" title="Add to Cart" type="button">Добавить в корзину</button>
+                <div class="cart-actions">
+                    <div class="addto row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <button onclick="" class="button btn-block btn-cart cart first" title="Add to Cart" type="button">В корзину</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"></div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><a class="link-wishlist wishlist btn-block ">Добавить в избранное</a></div>
+                    <div style="clear:both"></div>
+                    <h3 class="incaps"><i class="fa fa fa-check-circle-o color-in"></i> In stock</h3>
+                    <h3 style="display:none" class="incaps"><i class="fa fa-minus-circle color-out"></i> Out of stock</h3>
+                    <h3 class="incaps"><i class="glyphicon glyphicon-lock"></i> Secure online ordering</h3>
                 </div>
-                <div style="clear:both"></div>
-                <h3 class="incaps"><i class="fa fa fa-check-circle-o color-in"></i> In stock</h3>
-                <h3 style="display:none" class="incaps"><i class="fa fa-minus-circle color-out"></i> Out of stock</h3>
-                <h3 class="incaps"><i class="glyphicon glyphicon-lock"></i> Secure online ordering</h3>
-            </div>
+            </form>
 
             <div class="clear"></div>
             <div class="product-tab w100 clearfix">
@@ -101,7 +87,7 @@
                 </ul>
 
                 <div class="tab-content">
-                    <div class="tab-pane active" id="details">Sed ut eros felis. Vestibulum rutrum imperdiet nunc ainterdum. In scelerisque libero ut elit porttitor commodo. Suspendisse laoreet magna necurnafringilla viverra.<br>100% Cotton<br></div>
+                    <div class="tab-pane active" id="details">{{ product.description }}</div>
                     <div class="tab-pane" id="size"> 16" waist<br>Model wears size 31. Model is 6'2 <br></div>
                     <div class="tab-pane" id="shipping">
                         <table>
