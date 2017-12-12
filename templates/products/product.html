@@ -45,17 +45,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-6">
                             <div class="filterBox">
-                                <select class="form-control">
-                                    <option value="strawberries" selected="">Количество
-                                    <option value="mango">1
-                                    <option value="bananas">2
-                                    <option value="watermelon">3
-                                    <option value="grapes">4
-                                    <option value="oranges">5
-                                    <option value="pineapple">6
-                                    <option value="peaches">7
-                                    <option value="cherries">8
-                                </select>
+                                <input type="number" class="form-control" name="number" id="number" placeholder="1" value="1">
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6 col-xs-6">
@@ -67,7 +57,17 @@
                 <div class="cart-actions">
                     <div class="addto row">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <button onclick="" class="button btn-block btn-cart cart first" title="Add to Cart" type="button">В корзину</button>
+                            <button
+                                    class="button btn-block btn-cart cart first"
+                                    title="Add to Cart"
+                                    type="submit"
+                                    data-product_id = "{{ product.id }}"
+                                    data-product_name = "{{ product.name }}"
+                                    data-product_price = "{{ product.price }}"
+                                    data-product_img = "{{ product.name }}"
+                                    id="submit_button">
+                                В корзину
+                            </button>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"></div>
                     </div>
