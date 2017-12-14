@@ -40,12 +40,12 @@
                 <p></p>
             </div>
 
-            <form action="" id="form_buy_product">
+            <form action="{% url 'cart_adding' %}" id="form_buy_product">{% csrf_token %}
                 <div class="productFilter productFilterLook2">
                     <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-6">
                             <div class="filterBox">
-                                <input type="number" class="form-control" name="number" id="number" placeholder="1" value="1">
+                                <input type="number" class="form-control" name="count" id="count" placeholder="1" value="1">
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6 col-xs-6">
